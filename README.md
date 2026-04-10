@@ -74,6 +74,12 @@ The app ships with original game content inspired by the physical game:
 
 Based on the original game by **Tommy Maranges & Carly Nance** — [robots.management](https://robots.management)
 
+## License
+
+This project is licensed under [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)](https://creativecommons.org/licenses/by-nc-sa/4.0/), the same license as the base game website [robots.management](https://robots.management/).
+
+You are free to share and adapt this work for non-commercial purposes, provided you give appropriate credit and distribute your contributions under the same license.
+
 
 Currently, two official plugins are available:
 

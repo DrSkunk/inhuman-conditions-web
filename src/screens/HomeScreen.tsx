@@ -101,6 +101,16 @@ export function HomeScreen() {
       <div className="mt-12 text-zinc-700 text-xs text-center space-y-1">
         <p>BASED ON THE GAME BY TOMMY MARANGES & CARLY NANCE</p>
         <p>robots.management</p>
+        <p>
+          <a
+            href="https://creativecommons.org/licenses/by-nc-sa/4.0/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-zinc-500"
+          >
+            CC BY-NC-SA 4.0
+          </a>
+        </p>
       </div>
     </div>
   );
