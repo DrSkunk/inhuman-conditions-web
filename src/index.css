@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
+  background-color: #0d0d0d;
+  color: #d4c5a9;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scanline overlay */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.04) 2px,
+    rgba(0, 0, 0, 0.04) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes flicker {
+  0%, 95%, 100% { opacity: 1; }
+  96%, 98% { opacity: 0.8; }
+  97%, 99% { opacity: 0.92; }
+}
+
+@keyframes pulse-border {
+  0%, 100% { border-color: #b91c1c; }
+  50% { border-color: #ef4444; }
+}
+
+.blink {
+  animation: blink 1s step-end infinite;
+}
+
+.flicker {
+  animation: flicker 5s infinite;
+}
+
+.pulse-border {
+  animation: pulse-border 1.5s ease-in-out infinite;
+}
+
+/* Stamp style */
+.stamp {
+  display: inline-block;
+  transform: rotate(-8deg);
+  letter-spacing: 0.2em;
+  font-weight: bold;
+  padding: 4px 16px;
+  border-width: 4px;
+  border-style: solid;
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+
+.stamp-human {
+  color: #166534;
+  border-color: #166534;
+}
+
+.stamp-robot {
+  color: #991b1b;
+  border-color: #991b1b;
+}
+
+/* Timer color changes */
+.timer-normal { color: #d4c5a9; }
+.timer-warning { color: #f59e0b; }
+.timer-critical { color: #ef4444; animation: blink 0.5s step-end infinite; }
